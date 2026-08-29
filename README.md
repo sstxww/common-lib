@@ -1,5 +1,31 @@
 # common-lib
 
+<p align="center">
+  <img src="docs/assets/readme-banner.svg" alt="Repository overview banner" width="100%" />
+</p>
+
+<p align="center">
+  <img alt="Foundation" src="https://img.shields.io/badge/Foundation-Cross--repository-0369A1?style=flat-square" />
+  <img alt="Contracts" src="https://img.shields.io/badge/Contracts-Protocol_Buffers-0F6CBD?style=flat-square&logo=protobuf" />
+  <img alt="SDK" src="https://img.shields.io/badge/SDK-Go_·_TypeScript_·_Python-334155?style=flat-square" />
+  <img alt="Boundary" src="https://img.shields.io/badge/Boundary-No_reusable_secrets-2EA44F?style=flat-square" />
+</p>
+
+<p align="center"><a href="#生成">生成命令</a> · <a href="proto/byte/v/forge/contracts/">公开契约</a> · <a href="ui/">共享 UI</a></p>
+
+## 一眼看懂
+
+| 维度 | 说明 |
+| --- | --- |
+| 定位 | 跨仓稳定公开契约与无业务语义的通用 helper |
+| 唯一契约源 | `proto/byte/v/forge/contracts/` |
+| 主要消费端 | Go 生成物、TypeScript 类型，以及按需生成的 Python SDK |
+| 公开边界 | 只暴露状态投影与 capability；密码、Token、Cookie 和 provider 原始结构留在业务内部 |
+| 变更原则 | 稳定、跨域、可复用的能力进入本仓；具体业务状态机继续归业务仓所有 |
+
+---
+
+
 跨仓平台通用库：
 
 - `proto/byte/v/forge/contracts/`：公开 proto 契约唯一源头，只放跨仓稳定公开建模和 gRPC service；内部/private/provider 细节不得进入本目录。
